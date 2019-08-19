@@ -14,7 +14,15 @@
                         </div>
                     @endif
 
-                    <a href="/Admin/index">manage user</a>
+                    @if(Auth::user()->role=='admin')
+                    
+                         <a href="/Admin/index">manage user</a>
+                    
+                    @else
+                    
+                        <a href="/user/index">manage post</a>
+                    
+                    @endif
                     <br>
                     <a href="/Page">landing page</a>
                 </div>
