@@ -9,7 +9,7 @@
                 <div class="card-header">{{ __('Login as admin') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="/Admin/Login">
                         @csrf
 
                         <div class="form-group row">
@@ -39,7 +39,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                      
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -51,7 +51,10 @@
                                 </div>
                             </div>
                         </div>
-
+                        @if($errors->any())
+                        
+                        <center><h4>{{$errors->first()}}</h4></center>
+                    @endif
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -66,6 +69,7 @@
                             </div>
                         </div>
                     </form>
+                   
                 </div>
             </div>
         </div>
