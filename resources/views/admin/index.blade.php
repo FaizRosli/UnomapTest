@@ -7,7 +7,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">List all users
+                <a href="/Admin/add" class="btn btn-primary float-right">Add New User</a>
+                </div>
                 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,10 +17,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                   
-                   
-                   
 
                     <table class="table table-striped">
                         <thead>

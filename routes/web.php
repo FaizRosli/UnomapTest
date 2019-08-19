@@ -18,7 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/Admin/Login', 'AdminController@showLoginForm');
 Route::post('/Admin/Login', 'AdminController@login');
 Route::get('/Admin/index', 'AdminController@index');
+Route::get('/Admin/add', 'AdminController@showAddForm');
+Route::post('/Admin/add', 'AdminController@add');
 Route::get('/Admin/{id}/update', 'AdminController@showUpdateForm');
+Route::post('/Admin/{id}/update', 'AdminController@update');
+Route::get('/Admin/{id}/delete', 'AdminController@delete');

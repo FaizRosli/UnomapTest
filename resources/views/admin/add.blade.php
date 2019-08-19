@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">update user</div>
+                <div class="card-header">add user</div>
                 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,15 +14,19 @@
                         </div>
                     @endif
 
-                    <form action="/Admin/{{$user->id}}/update" method ="post">
+                    <form action="/Admin/add" method ="post">
                         @csrf
                         <label for="basic-url">Name :</label>
-                        <input type="text" class="form-control" placeholder="name" aria-label="name" aria-describedby="basic-addon1" name ="name" value ="{{$user->name}}">
+                        <input type="text" class="form-control" placeholder="name" aria-label="name" aria-describedby="basic-addon1" name ="name">
                         <br>
                         <label for="basic-url">Email :</label>
-                        <input type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name = "email" value ="{{$user->email}}">
+                        <input type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name = "email">
                         <br>
-                       <input type="submit" class="btn btn-primary" value = "Update">
+                        <label for="basic-url">Password :</label>
+                        <input type="password" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name = "password">
+                        <br>
+                    
+                       <input type="submit" class="btn btn-primary" value = "Add">
                     </form>
                 </div>
             </div>
