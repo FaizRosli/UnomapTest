@@ -8,7 +8,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">List all post
-                <a href="/user/add" class="btn btn-primary float-right">Add New Post</a>
+                
+                <a href="/user/add" class="btn btn-primary btn-sm float-right">Add New Post</a>
+               
+                <a href="/Page" class="btn btn-success btn-sm float-right">Go to News Feed</a>
                 </div>
                 
                 <div class="card-body">
