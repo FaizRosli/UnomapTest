@@ -34,3 +34,5 @@ Route::post('/user/add', 'UserController@add');
 Route::get('/user/{id}/update', 'UserController@showUpdateForm');
 Route::post('/user/{id}/update', 'UserController@update');
 Route::get('/user/{id}/delete', 'UserController@delete');
+
+Route::get('/Page', 'PageController@showAllPosts');
