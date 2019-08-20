@@ -31,3 +31,5 @@ Route::get('/Admin/{id}/delete', 'AdminController@delete');
 Route::get('/user/index', 'UserController@index');
 Route::get('/user/add', 'UserController@showAddForm');
 Route::post('/user/add', 'UserController@add');
+Route::get('/user/{id}/update', 'UserController@showUpdateForm');
+Route::post('/user/{id}/update', 'UserController@update');
