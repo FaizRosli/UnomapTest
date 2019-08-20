@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">List all post
+                <div class="card-header">List all post (news feed)
                 <!-- <a href="/Admin/add" class="btn btn-primary float-right">Add New User</a> -->
                 </div>
                 

@@ -24,7 +24,7 @@
                     
                     @endif
                     <br>
-                    <a href="/Page">landing page</a>
+                    <a href="/Page">landing page (news feed)</a>
                 </div>
             </div>
         </div>
