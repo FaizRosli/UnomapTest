@@ -53,4 +53,11 @@ class UserController extends Controller
         return redirect('/user/index');
 
     }
+
+    public function delete($id)
+    {
+        $data_post = \App\Post::find($id);
+        $data_post->delete();
+        return redirect('/user/index');
+    }
 }
