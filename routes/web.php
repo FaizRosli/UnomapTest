@@ -27,3 +27,7 @@ Route::post('/Admin/add', 'AdminController@add');
 Route::get('/Admin/{id}/update', 'AdminController@showUpdateForm');
 Route::post('/Admin/{id}/update', 'AdminController@update');
 Route::get('/Admin/{id}/delete', 'AdminController@delete');
+
+Route::get('/user/index', 'UserController@index');
+Route::get('/user/add', 'UserController@showAddForm');
+Route::post('/user/add', 'UserController@add');
