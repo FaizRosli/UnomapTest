@@ -71,6 +71,7 @@ class AdminController extends Controller
     public function delete($id)
     {
         $user = \App\User::find($id);
+        $user->post()->where('user_id',$id)->delete();
         $user->delete();
        
         return redirect('/Admin/index');
