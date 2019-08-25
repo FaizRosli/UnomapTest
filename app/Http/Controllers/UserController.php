@@ -68,4 +68,21 @@ class UserController extends Controller
        $post = \App\Post::all();
        return PostResource::collection($post);
     }
+
+    public function createpost(Request $request)
+    {
+        $user_id = Auth::user()->id;
+        $data_post = new \App\Post;
+
+        $data_post->title = $request->title;
+        $data_post->content= $request->content;
+        $data_post->user_id=$user_id;
+
+        $data_post->save();
+
+        return response()->json($data_post);
+
+    }
+
+
 }
