@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Http\Resources\Post as PostResource;
 class UserController extends Controller
 {
     //
@@ -59,5 +60,12 @@ class UserController extends Controller
         $data_post = \App\Post::find($id);
         $data_post->delete();
         return redirect('/user/index');
+    }
+
+    public function ListAllPost()
+    {
+       //return response()->json(\App\Post::all());
+       $post = \App\Post::all();
+       return PostResource::collection($post);
     }
 }
